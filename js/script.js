@@ -11,7 +11,7 @@ switchButton.addEventListener("click", function(){
         rootStyle.style.setProperty("--color-black", "#eddefc");
         rootStyle.style.setProperty("--theme-font-color-secondary", "#0a0212");
         rootStyle.style.setProperty("--theme-bg-light", "#99a0ec");
-        rootStyle.style.setProperty("--theme-footer-color", "#8C94F2");
+        rootStyle.style.setProperty("--theme-footer-color", "#0a0212");
         rootStyle.style.setProperty("--color-alert", "#212121");
     }
     else{

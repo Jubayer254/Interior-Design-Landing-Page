@@ -47,7 +47,7 @@ ul {
 
 .project-sidebar{
     width: 20%;
-    height: 80%;
+    height: 100vh;
     background-color: var(--theme-bg);
     color: var(--theme-font-color);
     padding: 50px;
