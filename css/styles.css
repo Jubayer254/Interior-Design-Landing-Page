@@ -47,14 +47,11 @@ ul {
 
 .project-sidebar{
     width: 20%;
-    height: 100vh;
     background-color: var(--theme-bg);
     color: var(--theme-font-color);
     padding: 50px;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
-
 }
 
 .project-sidebar h3{
@@ -87,7 +84,7 @@ ul {
 .project-footer{
     box-sizing: border-box;
     height: 100px;
-    width: 100vw;
+    width:inherit;
     background-color: var(--theme-footer-color);
 }
 
@@ -95,7 +92,7 @@ ul {
 
 .project-body{
     width: 80%;
-    padding: 60px 40px 0 40px;
+    padding: 60px 4% 0 4%;
     font-size: 25px;
 }
 
