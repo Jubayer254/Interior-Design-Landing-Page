@@ -85,7 +85,8 @@ ul {
 /* ------------------------------------FOOTER------------------------------------ */
 
 .project-footer{
-    height: 100px;
+    box-sizing: border-box;
+    height: 100vw;
     width: 100%;
     background-color: var(--theme-footer-color);
 }
@@ -96,7 +97,6 @@ ul {
     width: 80%;
     padding: 60px 40px 0 40px;
     font-size: 25px;
-    overflow: hidden;
 }
 
 .project-body h1{
