@@ -47,11 +47,13 @@ ul {
 
 .project-sidebar{
     width: 20%;
+    height: 100vh;
     background-color: var(--theme-bg);
     color: var(--theme-font-color);
     padding: 50px;
     position: -webkit-sticky;
     position: sticky;
+    top: 0;
 }
 
 .project-sidebar h3{
