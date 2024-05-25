@@ -12,6 +12,7 @@ switchButton.addEventListener("click", function(){
         rootStyle.style.setProperty("--theme-font-color-secondary", "#0a0212");
         rootStyle.style.setProperty("--theme-bg-light", "#99a0ec");
         rootStyle.style.setProperty("--theme-footer-color", "#8C94F2");
+        rootStyle.style.setProperty("--color-alert", "#212121");
     }
     else{
         rootStyle.style.setProperty("--theme-font-color", "#FFFFFF");
@@ -20,6 +21,7 @@ switchButton.addEventListener("click", function(){
         rootStyle.style.setProperty("--theme-font-color-secondary", "#e8e5e5");
         rootStyle.style.setProperty("--theme-bg-light", "#ff846e");
         rootStyle.style.setProperty("--theme-footer-color", "#F1F1F1");
+        rootStyle.style.setProperty("--color-alert", "#FFFFFF");
     }
 
 })
@@ -86,7 +88,6 @@ basicSignUpButton.addEventListener("click", function(){
 })
 
 // SIGNUP PRO
-
 const proSignUpButton = document.getElementById("sign-up-pro");
 proSignUpButton.addEventListener("click", function(){
     let room = parseInt(document.getElementById("room-pro").textContent);
@@ -94,4 +95,52 @@ proSignUpButton.addEventListener("click", function(){
                                                             `<p class="checkout-text">Thank you for choosing ${room} room</p>` +
                                                         `</div>`;
 
+})
+
+// EMAIL VALIDATION
+function isValidEmail(email) {
+    // Simple email validation regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// CONTACT
+const contact_btn_id = document.getElementById("contact-btn-id");
+contact_btn_id.addEventListener("click", function(event){
+    event.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var msg = document.getElementById("msg").value;
+
+    if(!name || !email || !msg){
+        Swal.fire({
+            icon: "warning",
+            title: "Oops...",
+            text: "Please input the required fields!",
+            customClass: {
+                confirmButton: 'warning-button' // Apply the custom class to the button
+            }
+          });
+    }
+    else if (!isValidEmail(email)) {
+        Swal.fire({
+          icon: "warning",
+          title: "Invalid Email",
+          text: "Please enter a valid email address!",
+          customClass: {
+            confirmButton: 'warning-button' // Apply the custom class to the button
+          }
+        });
+    }
+    else{
+        Swal.fire({
+            icon: "success",
+            title: "Thank You",
+            text: "Your feedback has been successfully submitted!",
+            customClass: {
+                confirmButton: 'success-button' // Apply the custom class to the button
+            }
+          });
+    }
 })

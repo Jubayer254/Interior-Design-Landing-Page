@@ -12,6 +12,7 @@
     --theme-p-color-light:#bfbcbc;
     --color-black: #000000;
     --color-white: #ffffff;
+    --color-alert: #ffffff;
 }
 
 /* ------------------------------------BODY------------------------------------ */
@@ -58,7 +59,7 @@ ul {
 
 .project-sidebar h3{
     font-size: 25px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .project-sidebar li, a{
@@ -148,6 +149,9 @@ ul {
     }
     .project-body-packages-all-infos{
         grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .project-sidebar h3{
+        font-size: 20px !important;
     }
 }
 
@@ -354,3 +358,29 @@ ul {
     background-color: var(--theme-bg-light);
 }
 
+.required-symbol{
+    font-size: 15px;
+    color: var(--theme-bg);
+}
+
+.swal2-confirm.warning-button {
+    background-color: #7a0202 !important; 
+    color: #FFF !important; 
+}
+
+.swal2-confirm.success-button {
+    background-color: #107007 !important; 
+    color: #FFF !important; 
+}
+
+.swal2-popup {
+    background-color: var(--color-alert)!important; 
+}
+
+.swal2-title {
+    color: var(--color-black) !important;
+}
+
+#swal2-html-container {
+    color: var(--theme-p-color) !important; 
+}
