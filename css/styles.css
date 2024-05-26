@@ -85,8 +85,8 @@ ul {
 
 .project-footer{
     box-sizing: border-box;
-    height: 100px;
-    width:inherit;
+    height: 70px;
+    width:100%;
     background-color: var(--theme-footer-color);
 }
 
